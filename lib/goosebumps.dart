@@ -1,1 +1,1 @@
-export 'package:goosebumps/src/goosebumps.dart' show Horror, Frequency, Frequencies;
+export 'package:goosebumps/src/goosebumps.dart' show Horror, Frequency, Frequencies, WidgetFlutterBinding;

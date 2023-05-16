@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 
 void main() {
   Horror.init(frequency: Frequencies.veryHigh);
+  // To be less conspicuous, you can use this instead:
+  // WidgetFlutterBinding.ensureInitialized();
+  
   runApp(MyApp());
 }
 

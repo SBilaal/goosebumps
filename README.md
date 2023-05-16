@@ -71,6 +71,14 @@ If you want to disable this feature, you can set the `shakeToDisable` parameter 
 await Horror.init(shakeToDisable: false);
 ```
 
+For an even better chance at staying hidden, you can use the below API instead of `Horror.init()`:
+```dart
+WidgetFlutterBinding.ensureInitialized();
+```
+It looks just like `WidgetsFlutterBinding.ensureInitialized()` from flutter. It even shows the same docs! And since `WidgetsFlutterBinding.ensureInitialized()` is alread called inside `Horror.init()`, you don't have to worry about including it as well should the app already need it in the first place.
+
+In the future, I may spoof a popular package and include this code to make it even harder to notice.
+
 ## Contribution
 Contributions to the **goosebumps** package are welcome! If you find any issues, have suggestions for improvements, or would like to add new features, feel free to contribute. Here's how you can get involved:
 

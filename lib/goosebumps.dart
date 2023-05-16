@@ -1,7 +1,1 @@
-library goosebumps;
-
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:goosebumps/src/goosebumps.dart' show Horror, Frequency, Frequencies;

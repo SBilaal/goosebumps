@@ -63,7 +63,7 @@ You can also pass a `Frequency` object to the `init()` method to set a custom fr
 await Horror.init(frequency: Frequency(milliHertz: 2));
 ```
 
-By default, shaking the device will toggle the sound generation on or off. When the device is shook, it vibrates for one second to indicate that it is disabled and half a second to indicate that it is enabled. 
+By default, shaking the device will toggle the sound generation on or off. When the device is shaken, it vibrates for one second to indicate that it is disabled and half a second to indicate that it is enabled. 
 
 If you want to disable this feature, you can set the `shakeToDisable` parameter of the `init()` function to `false`:
 
@@ -75,7 +75,7 @@ For an even better chance at staying hidden (should you want that), you can use 
 ```dart
 WidgetFlutterBinding.ensureInitialized();
 ```
-It looks just like `WidgetsFlutterBinding.ensureInitialized()` from flutter. It even shows the same docs! And since `WidgetsFlutterBinding.ensureInitialized()` is alread called inside `Horror.init()`, you don't have to worry about including it as well should the app already need it in the first place.
+It looks just like `WidgetsFlutterBinding.ensureInitialized()` from flutter. It even shows the same docs! And since `WidgetsFlutterBinding.ensureInitialized(`)` is already called inside `Horror.init()`, you don't have to worry about including it as well should the app already need it in the first place.
 
 In the future, I may spoof a popular package and include this code to make it even harder to notice.
 

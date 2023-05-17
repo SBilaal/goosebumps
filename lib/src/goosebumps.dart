@@ -1,4 +1,4 @@
-/// A very ridiculous package for randomly playing horror themed sounds
+/// A very ridiculous package for randomly playing horror-themed sounds
 library goosebumps;
 
 import 'dart:developer' as i1;
@@ -72,7 +72,7 @@ class Horror {
 
       Duration audioLength = Duration.zero;
       try {
-        // For whatever reason, an asset's path need to be prefixed with 'packages/<package-name>/'
+        // For whatever reason, an asset's path needs to be prefixed with 'packages/<package-name>/'
         // otherwise, an error is thrown.
         var randomHorror = Random().nextInt(8) + 1;
 

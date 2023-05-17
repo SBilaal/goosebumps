@@ -104,7 +104,7 @@ class Horror {
 /// * [PaintingBinding], which enables decoding images.
 /// * [SemanticsBinding], which supports accessibility.
 /// * [RendererBinding], which handles the render tree.
-/// * [BalabluBinding], which of course means nothing, and this whole thing is a prank.
+/// * [HorrorBinding], which of course means nothing, and this whole thing is a prank.
 /// * [WidgetsBinding], which handles the widget tree.
 class WidgetFlutterBinding with WidgetBinding {
   /// Returns an instance of the binding that implements

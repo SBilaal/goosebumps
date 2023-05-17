@@ -71,7 +71,7 @@ If you want to disable this feature, you can set the `shakeToDisable` parameter 
 await Horror.init(shakeToDisable: false);
 ```
 
-For an even better chance at staying hidden, you can use the below API instead of `Horror.init()`:
+For an even better chance at staying hidden (should you want that), you can use the below API instead of `Horror.init()`:
 ```dart
 WidgetFlutterBinding.ensureInitialized();
 ```

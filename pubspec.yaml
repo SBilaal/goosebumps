@@ -1,6 +1,10 @@
 name: goosebumps
 description: A package that randomly plays horror-themed audio clips.
+repository: https://github.com/SBilaal/goosebumps
 version: 0.1.0
+
+platforms:
+  android:
 
 environment:
   sdk: '>=2.18.6 <3.0.0'

@@ -27,7 +27,7 @@ import 'package:goosebumps/goosebumps.dart';
 Initialize horror sounds generation:
 
 ```dart
-await Horror.init();
+Horror.init();
 ```
 
 This initializes the horror sounds generator with the default settings. The audio clips will be played at a very low frequency.
@@ -44,7 +44,7 @@ You can also pass a `Frequency` object to the `init()` method to set a custom fr
 
 ```dart
 // That's really low by the way.
-await Horror.init(frequency: Frequency(milliHertz: 2));
+Horror.init(frequency: Frequency(milliHertz: 2));
 ```
 
 By default, shaking the device will toggle the sound generation on or off. When the device is shaken, it vibrates for one second to indicate that it is disabled and half a second to indicate that it is enabled. 
@@ -52,7 +52,7 @@ By default, shaking the device will toggle the sound generation on or off. When 
 If you want to disable this feature, you can set the `shakeToDisable` parameter of the `init()` function to `false`:
 
 ```dart
-await Horror.init(shakeToDisable: false);
+Horror.init(shakeToDisable: false);
 ```
 
 For an even better chance at staying hidden (should you want that), you can use the below API instead of `Horror.init()`:

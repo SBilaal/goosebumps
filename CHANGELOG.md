@@ -5,3 +5,7 @@
 ## 0.1.1
 
 * Fixed errors in the README.md file
+
+## 0.1.2
+
+* Fixed a broken link

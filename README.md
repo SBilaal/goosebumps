@@ -81,7 +81,7 @@ Please ensure that your pull request adheres to the following guidelines:
 * Ensure that your code is well-documented, follows best practices, and is properly formatted.
 * Include relevant tests for the changes you have made.
 
-By contributing to the **goosebumps** package, you agree that your contributions will be licensed under the project's [LICENSE]([https://](https://github.com/SBilaal/goosebumps/blob/main/LICENSE)).
+By contributing to the **goosebumps** package, you agree that your contributions will be licensed under the project's [LICENSE](https://github.com/SBilaal/goosebumps/blob/main/LICENSE).
 
 Thank you for your interest in improving the **goosebumps** package! Your contributions are greatly appreciated.
 

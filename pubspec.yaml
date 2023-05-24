@@ -1,5 +1,5 @@
 name: goosebumps
-description: A package that randomly plays horror-themed audio clips.
+description: A package that randomly plays horror-themed audio clips. You can set how frequently the clips are played. 'Useful' for pranking colleagues and friends.
 repository: https://github.com/SBilaal/goosebumps
 version: 0.1.1
 

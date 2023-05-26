@@ -39,26 +39,34 @@ class Horror {
   static const _expectedNum = 1;
   static const _numAudioFiles = 8;
   static bool _isEnabled = true;
+  static bool _isInitialized = false;
 
   static void init({Frequency frequency = Frequencies.veryLow, bool shakeToDisable = true}) async {
-    WidgetsFlutterBinding.ensureInitialized();
-    final player = AudioPlayer()..audioCache = AudioCache(prefix: '');
-    if (shakeToDisable) {
-      ShakeDetector.autoStart(
-        onPhoneShake: () async {
-          _isEnabled = !_isEnabled;
-          try {
-            if (await Vibration.hasVibrator() ?? false) {
-              await Vibration.vibrate(duration: _isEnabled ? 500 : 1000);
+    // This ensures the content of init() is run just once.
+    if (!_isInitialized) {
+      _isInitialized = true;
+
+      WidgetsFlutterBinding.ensureInitialized();
+      final player = AudioPlayer()..audioCache = AudioCache(prefix: '');
+
+      if (shakeToDisable) {
+        ShakeDetector.autoStart(
+          onPhoneShake: () async {
+            _isEnabled = !_isEnabled;
+            try {
+              if (await Vibration.hasVibrator() ?? false) {
+                await Vibration.vibrate(duration: _isEnabled ? 500 : 1000);
+              }
+            } catch (e) {
+              i1.log('Unable to vibrate.\n', error: e);
             }
-          } catch (e) {
-            i1.log('Unable to vibrate.\n', error: e);
-          }
-          if (_isEnabled) await _terrify(frequency, player);
-        },
-      );
+            if (_isEnabled) await _terrify(frequency, player);
+          },
+        );
+      }
+
+      await _terrify(frequency, player);
     }
-    await _terrify(frequency, player);
   }
 
   static Future<void> _terrify(Frequency frequency, AudioPlayer player) async {

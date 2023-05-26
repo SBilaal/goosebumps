@@ -30,7 +30,16 @@ Initialize horror sounds generation:
 Horror.init();
 ```
 
-This initializes the horror sounds generator with the default settings. The audio clips will be played at a very low frequency.
+This initializes the horror sound generator with the default settings. The audio clips will be played at a very low frequency.
+
+You can call `Horror.init()` at any point in your code for execution, be it within a function, constructor, or other places. However, if you want it initialized immediately after launching the app, call it within the `main()` function.
+
+```dart
+void main() {
+    Horror.init();
+    runApp(MyApp());
+}
+```
 
 #### Setting The Frequency
 You can customize the frequency using the `Frequency` class. The smaller the frequency value, the fewer times the audio clip is played. The `Frequencies` class provides some predefined frequency constants:

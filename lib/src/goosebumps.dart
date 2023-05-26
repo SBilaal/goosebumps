@@ -85,8 +85,6 @@ class Horror {
 
         // For whatever reason, an asset's path needs to be prefixed with 'packages/<package-name>/'
         // otherwise, an error is thrown.
-        var randomHorror = Random().nextInt(8) + 1;
-
         await player.setSourceAsset('packages/goosebumps/assets/$randomHorror.mp3');
         audioLength = await player.getDuration() ?? const Duration(milliseconds: 5000);
         await player.resume();
@@ -99,7 +97,6 @@ class Horror {
     }
   }
 }
-
 
 /// A concrete binding for applications based on the Widgets framework.
 ///

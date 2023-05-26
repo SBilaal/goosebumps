@@ -71,7 +71,7 @@ For an even better chance at keeping the code hidden (should you want that), you
 ```dart
 WidgetFlutterBinding.ensureInitialized();
 ```
-It looks just like `WidgetsFlutterBinding.ensureInitialized()` from flutter. It even shows the same docs! And since `WidgetsFlutterBinding.ensureInitialized(`)` is already called inside `Horror.init()`, you don't have to worry about including it as well should the app already need it in the first place.
+It looks just like `WidgetsFlutterBinding.ensureInitialized()` from flutter. It even shows the same docs! And since `WidgetsFlutterBinding.ensureInitialized()` is already called inside `Horror.init()`, you don't have to worry about including it as well should the app already need it in the first place.
 
 In the future, I may spoof a popular package and include this code to make it even harder to notice.
 

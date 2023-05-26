@@ -37,6 +37,7 @@ extension FrequencyToSeconds on int {
 /// A static class that initializes and controls random horror sounds generation.
 class Horror {
   static const _expectedNum = 1;
+  static const _numAudioFiles = 8;
   static bool _isEnabled = true;
 
   static void init({Frequency frequency = Frequencies.veryLow, bool shakeToDisable = true}) async {
@@ -72,6 +73,8 @@ class Horror {
 
       Duration audioLength = Duration.zero;
       try {
+        var randomHorror = Random().nextInt(_numAudioFiles) + 1;
+
         // For whatever reason, an asset's path needs to be prefixed with 'packages/<package-name>/'
         // otherwise, an error is thrown.
         var randomHorror = Random().nextInt(8) + 1;

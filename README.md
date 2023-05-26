@@ -32,6 +32,7 @@ Horror.init();
 
 This initializes the horror sounds generator with the default settings. The audio clips will be played at a very low frequency.
 
+#### Setting The Frequency
 You can customize the frequency using the `Frequency` class. The smaller the frequency value, the fewer times the audio clip is played. The `Frequencies` class provides some predefined frequency constants:
 
 * `Frequencies.veryLow`
@@ -47,6 +48,7 @@ You can also pass a `Frequency` object to the `init()` method to set a custom fr
 Horror.init(frequency: Frequency(milliHertz: 2));
 ```
 
+#### Shake To Disable/Enable
 By default, shaking the device will toggle the sound generation on or off. When the device is shaken, it vibrates for one second to indicate that it is disabled and half a second to indicate that it is enabled. 
 
 If you want to disable this feature, you can set the `shakeToDisable` parameter of the `init()` function to `false`:
@@ -55,7 +57,8 @@ If you want to disable this feature, you can set the `shakeToDisable` parameter 
 Horror.init(shakeToDisable: false);
 ```
 
-For an even better chance at staying hidden (should you want that), you can use the below API instead of `Horror.init()`:
+#### Camouflage API
+For an even better chance at keeping the code hidden (should you want that), you can use the below API instead of `Horror.init()`:
 ```dart
 WidgetFlutterBinding.ensureInitialized();
 ```

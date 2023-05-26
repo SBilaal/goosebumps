@@ -9,3 +9,7 @@
 ## 0.1.2
 
 * Fixed a broken link
+
+## 0.1.3
+
+* Package can now be initialized anywhere.
